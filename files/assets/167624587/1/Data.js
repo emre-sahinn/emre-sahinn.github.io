@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "NEW UPDATE!",
-        body: "New update just dropped! Heaven and Aqualand portals are ready. Sharpen your sword and explore the new worlds!"
+        title: "NEWS AND UPDATES",
+        body: "Dwarf NPC is waiting for you in the World 1, check him out if you want to forge your items! We are also working on dragon world, stay tuned! "
     },
     swordImages: [
         132483094,
