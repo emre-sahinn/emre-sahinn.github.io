@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "NEWS AND UPDATES",
-        body: "Dwarf NPC is waiting for you in the World 1, check him out if you want to forge your items! We are also working on dragon world, stay tuned! "
+        title: "NEW UPDATE IS HERE!",
+        body: "PvP world is at the town, fight against with other players! We also added buying 10x eggs at once and working on dragon world, stay tuned! "
     },
     swordImages: [
         132483094,
