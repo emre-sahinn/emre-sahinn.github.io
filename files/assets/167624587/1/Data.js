@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "NEW UPDATE IS HERE!",
-        body: "PvP world is at the town, fight against with other players! We also added buying 10x eggs at once and working on dragon world, stay tuned! "
+        title: "MINI UPDATE!",
+        body: "Hey! Create room option is added so now you can create your own room to play with your friends. Beware, other players can still join your room!"
     },
     swordImages: [
         132483094,
