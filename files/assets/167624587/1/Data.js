@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "MINI UPDATE!",
-        body: "Hey! Create room option is added so now you can create your own room to play with your friends. Beware, other players can still join your room!"
+        title: "DRAGON UPDATE!",
+        body: "Dragon update just dropped! Go to the Ork Land and check out the new scary dragon area, don't forget to call your friends for help!!"
     },
     swordImages: [
         132483094,
@@ -34,6 +34,8 @@ let StaticData = {
         167963742,
         167963755,
         167963772,
+        171267518,
+        171266022
     ],
     shieldImages: [
         132483094,
@@ -65,6 +67,8 @@ let StaticData = {
         167963803,
         167963806,
         167963810,
+        171267623,
+        171267634
     ],
     petImages: [
         141521157,
