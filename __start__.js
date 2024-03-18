@@ -149,7 +149,7 @@ function createGraphicsDevice(callback) {
             glslangUrl: '/webgpu/glslang.js',
             twgslUrl: '/webgpu/twgsl.js',
             powerPreference: deviceOptions.powerPreference,
-            antialias: deviceOptions.antiAlias !== false,
+            antialias: deviceOptions.antialias !== false,
             alpha: deviceOptions.transparentCanvas !== false,
             preserveDrawingBuffer: !!deviceOptions.preserveDrawingBuffer
         };
