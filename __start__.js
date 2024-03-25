@@ -162,15 +162,18 @@ function createGraphicsDevice(callback) {
         })
     } else {
         // old webgl graphics device creation
-        if (!deviceOptions.graphicsDeviceOptions) {
-            deviceOptions.graphicsDeviceOptions = { };
-        }
-        if (platform.browser && !!navigator.xr) {
-            deviceOptions.graphicsDeviceOptions.xrCompatible = true;
-        }
-        deviceOptions.graphicsDeviceOptions.alpha = deviceOptions.graphicsDeviceOptions.alpha || false;
+        var options = {
+            powerPreference: deviceOptions.powerPreference,
+            antialias: deviceOptions.antialias !== false,
+            alpha: deviceOptions.transparentCanvas !== false,
+            preserveDrawingBuffer: !!deviceOptions.preserveDrawingBuffer
+        };
 
-        callback(new pc.WebglGraphicsDevice(canvas, deviceOptions.graphicsDeviceOptions));
+        if (pc.platform.browser && !!navigator.xr) {
+            options.xrCompatible = true;
+        }
+
+        callback(new pc.WebglGraphicsDevice(canvas, options));
     }
 }
 
