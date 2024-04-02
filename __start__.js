@@ -138,16 +138,19 @@ function displayError(html) {
 function createGraphicsDevice(callback) {
     var deviceOptions = window.CONTEXT_OPTIONS ? window.CONTEXT_OPTIONS : {};
 
+    var LEGACY_WEBGL = 'webgl';
     var deviceTypes = deviceOptions.preferWebGpu ? [pc.DEVICETYPE_WEBGPU] : deviceOptions.preferWebGl2 ?
-        [pc.DEVICETYPE_WEBGL2, pc.DEVICETYPE_WEBGL1] :
-        [pc.DEVICETYPE_WEBGL1, pc.DEVICETYPE_WEBGL2];
+        [pc.DEVICETYPE_WEBGL2, pc.DEVICETYPE_WEBGL1, LEGACY_WEBGL] :
+        [pc.DEVICETYPE_WEBGL1, pc.DEVICETYPE_WEBGL2, LEGACY_WEBGL];
 
     if (typeof window.Promise === 'function') {
+        var gpuLibPath = window.ASSET_PREFIX ? (window.ASSET_PREFIX.replace(/\/$/g, '') + '/') : '';
+
         // new graphics device creation function with promises
         var gfxOptions = {
             deviceTypes: deviceTypes,
-            glslangUrl: '/webgpu/glslang.js',
-            twgslUrl: '/webgpu/twgsl.js',
+            glslangUrl: gpuLibPath + 'glslang.js',
+            twgslUrl: gpuLibPath + 'twgsl.js',
             powerPreference: deviceOptions.powerPreference,
             antialias: deviceOptions.antialias !== false,
             alpha: deviceOptions.transparentCanvas !== false,
@@ -205,8 +208,7 @@ function initApp(device) {
             pc.SpriteComponentSystem,
             pc.LayoutGroupComponentSystem,
             pc.LayoutChildComponentSystem,
-            pc.ZoneComponentSystem,
-            pc.GSplatComponentSystem
+            pc.ZoneComponentSystem
         ];
 
         createOptions.resourceHandlers = [
@@ -233,9 +235,13 @@ function initApp(device) {
             pc.TextureAtlasHandler,
             pc.SpriteHandler,
             pc.TemplateHandler,
-            pc.ContainerHandler,
-            pc.GSplatHandler
+            pc.ContainerHandler
         ];
+
+        if (pc.GSplatComponentSystem) {
+            createOptions.componentSystems.push(pc.GSplatComponentSystem);
+            createOptions.resourceHandlers.push(pc.GSplatHandler);
+        }
 
         createOptions.elementInput = new pc.ElementInput(canvas, {
             useMouse: INPUT_SETTINGS.useMouse,

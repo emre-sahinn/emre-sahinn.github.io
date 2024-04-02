@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "DRAGON UPDATE!",
-        body: "Dragon update just dropped! Go to the Ork Land and check out the new scary dragon area, don't forget to call your friends for help!!"
+        title: "Trading is here!",
+        body: "Trade world just dropped so now you can sell your weapons or pets with other players and buy from others!"
     },
     swordImages: [
         132483094,
