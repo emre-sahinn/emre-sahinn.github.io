@@ -203,9 +203,11 @@ sharethrough.com,8bab9627,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,OAW69Fon,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,wKXmcIVS,DIRECT,d53b998a7bd4ecd2
 showheroes.com,6541,DIRECT
+smaato.com,1100004890,RESELLER,07bcf65f187117b4
 smaato.com,1100044045,RESELLER,07bcf65f187117b4
 smaato.com,1100044650,RESELLER,07bcf65f187117b4
 smaato.com,1100047713,RESELLER,07bcf65f187117b4
+smaato.com,1100057444,RESELLER,07bcf65f187117b4
 smartadserver.com,1408,RESELLER
 smartadserver.com,1999,RESELLER,060d053dcf45cbf3
 smartadserver.com,1999-OB,RESELLER,060d053dcf45cbf3
