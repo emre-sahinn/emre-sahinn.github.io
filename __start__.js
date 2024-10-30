@@ -214,8 +214,9 @@
                 pc.SpriteComponentSystem,
                 pc.LayoutGroupComponentSystem,
                 pc.LayoutChildComponentSystem,
-                pc.ZoneComponentSystem
-            ];
+                pc.ZoneComponentSystem,
+                pc.GSplatComponentSystem,
+            ].filter(Boolean);
 
             createOptions.resourceHandlers = [
                 pc.RenderHandler,
@@ -241,13 +242,9 @@
                 pc.TextureAtlasHandler,
                 pc.SpriteHandler,
                 pc.TemplateHandler,
-                pc.ContainerHandler
-            ];
-
-            if (pc.GSplatComponentSystem) {
-                createOptions.componentSystems.push(pc.GSplatComponentSystem);
-                createOptions.resourceHandlers.push(pc.GSplatHandler);
-            }
+                pc.ContainerHandler,
+                pc.GSplatHandler
+            ].filter(Boolean);
 
             createOptions.elementInput = new pc.ElementInput(canvas, {
                 useMouse: INPUT_SETTINGS.useMouse,
@@ -269,19 +266,7 @@
             return true;
 
         } catch (e) {
-            var html = '';
-            if (e instanceof pc.UnsupportedBrowserError) {
-                html =
-                    'This page requires a browser that supports WebGL.<br/>' +
-                    '<a href="http://get.webgl.org">Click here to find out more.</a>';
-            } else if (e instanceof pc.ContextCreationError) {
-                html =
-                    "It doesn't appear your computer can support WebGL.<br/>" +
-                    '<a href="http://get.webgl.org/troubleshooting/">Click here for more information.</a>';
-            } else {
-                html = 'Could not initialize application. Error: ' + e;
-            }
-            displayError(html);
+            displayError('Could not initialize application. Error: ' + e);
             console.error(e);
             return false;
         }

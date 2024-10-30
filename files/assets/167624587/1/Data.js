@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Trading is here!",
-        body: "Trade world just dropped so now you can sell your weapons or pets with other players and buy from others!"
+        title: "Graveyard and Storage update!",
+        body: "New graveyard world just spawned in the dragon land, also you can now deposit your items to the storage chest!"
     },
     swordImages: [
         132483094,
