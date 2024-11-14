@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Graveyard and Storage update!",
-        body: "New graveyard world just spawned in the dragon land, also you can now deposit your items to the storage chest!"
+        title: "World 9 and Elf update!",
+        body: "We've just opened the gate of the Death world and only top players can defeat the boss, also check out the mysterious Elf in the Orc Land which offers unique items.."
     },
     swordImages: [
         132483094,
@@ -39,7 +39,9 @@ let StaticData = {
         171772669,
         171773095,
         171773096,
-
+        203408314,
+        203408313,
+        203408315
     ],
     shieldImages: [
         132483094,
@@ -76,7 +78,8 @@ let StaticData = {
         171773414,
         171773413,
         171773415,
-
+        203408362,
+        203408361
     ],
     petImages: [
         141521157,
