@@ -89,6 +89,7 @@ improvedigital.com,1057,RESELLER
 improvedigital.com,1895,RESELLER
 improvedigital.com,907,RESELLER
 indexexchange.com,187095,DIRECT
+indexexchange.com,192051,RESELLER
 indexexchange.com,192410,RESELLER,50b1c356f2c5c8fc
 indexexchange.com,194558,RESELLER
 indexexchange.com,195921,RESELLER,50b1c356f2c5c8fc
@@ -173,6 +174,7 @@ rubiconproject.com,23876,RESELLER,0bfd66d529a55807
 rubiconproject.com,9753,RESELLER,0bfd66d529a55807
 rubiconproject.com,9755,RESELLER,0bfd66d529a55807
 sharethrough.com,1f7e920a,DIRECT,d53b998a7bd4ecd2
+sharethrough.com,5095,DIRECT,d53b998a7bd4ecd2
 sharethrough.com,5926d422,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,OAW69Fon,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,wKXmcIVS,DIRECT,d53b998a7bd4ecd2
@@ -197,6 +199,7 @@ smartadserver.com,4074,RESELLER
 smartadserver.com,4125,RESELLER,060d053dcf45cbf3
 smartadserver.com,4284,RESELLER
 smartadserver.com,4342,RESELLER
+smartadserver.com,5095,DIRECT,060d053dcf45cbf3
 smartclip.net,10505,DIRECT
 smartclip.net,10507,DIRECT
 smartclip.net,12170,DIRECT
