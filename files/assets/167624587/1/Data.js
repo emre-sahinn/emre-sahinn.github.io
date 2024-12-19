@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "World 9 and Elf update!",
-        body: "We've just opened the gate of the Death world and only top players can defeat the boss, also check out the mysterious Elf in the Orc Land which offers unique items.."
+        title: "Christmas Update!!",
+        body: "Hey masters, new year is approaching and we have new update for you! Check out the Pet enchancer machine at the Orc land to make your pets powerfull and enjoy the snow :)"
     },
     swordImages: [
         132483094,
