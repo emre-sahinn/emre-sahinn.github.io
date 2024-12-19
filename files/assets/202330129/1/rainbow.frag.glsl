@@ -44,7 +44,7 @@ vec4 applyMsdf(vec4 color) {
     float mapMin = 0.05;
     float mapMax = clamp(1.0 - font_sdfIntensity, mapMin, 1.0);
     float sigDistInner = map(mapMin, mapMax, sigDist);
-    float center = 0.5;
+    float center = 0.4;
 
     // Text opacity
     float inside = smoothstep(center - smoothing, center + smoothing, sigDistInner);
@@ -54,7 +54,13 @@ vec4 applyMsdf(vec4 color) {
     float outline = smoothstep(outlineEdge - smoothing, outlineEdge + smoothing, sigDistInner);
 
     // Rainbow effect based on UV coordinates and time
-    vec4 rainbowColorOutline = getRainbowColor(vUv0.x - time);  // Rainbow effect for text
+     // Calculate global position for linear rainbow effect
+    float globalPosition = -gl_FragCoord.x / 500.0 + time; // Adjust scaling for desired gradient length
+
+    // Rainbow effect for text
+    vec4 rainbowColorOutline = getRainbowColor(globalPosition);  // Rainbow for text
+
+   // vec4 rainbowColorOutline = getRainbowColor(vUv0.x - time);  // Rainbow effect for text
     //vec4 rainbowColorOutline = getRainbowColor(vUv0.x - time + 0.2);  // Slightly shifted rainbow for outline
     vec4 rainbowColorText  = vec4(0, 0, 0, 1.0); //black outline
 
