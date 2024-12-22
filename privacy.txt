@@ -1,7 +1,5 @@
 
-Privacy Policy for Sword Masters, Wheat Farming, Rainbow Obby, Escape From School
-
-At Sword Masters, Wheat Farming, Rainbow Obby, Escape From School, accessible from SwordMasters.io, poki.com/en/g/wheat-farming, poki.com/en/g/rainbow-obby, escapefromschool.emolingo.games, https://poki.com/en/g/escape-from-school, we are committed to prioritizing the privacy of our visitors. This Privacy Policy document outlines the types of information we collect and record and how we utilize it in compliance with privacy requirements.
+Privacy Policy for Sword Masters, Wheat Farming, Rainbow Obby, Escape From School, Disaster Arena will be mentioned as "Our games" accessible from SwordMasters.io, poki.com/en/g/wheat-farming, poki.com/en/g/rainbow-obby, poki.com/en/g/sword-masters, https://poki.com/en/g/escape-from-school, https://poki.com/en/g/disaster-arena we are committed to prioritizing the privacy of our visitors. This Privacy Policy document outlines the types of information we collect and record and how we utilize it in compliance with privacy requirements.
 
 If you have any questions or need additional information about our Privacy Policy, please feel free to contact us.
 
@@ -24,26 +22,35 @@ How We Use Your Information
 We use the collected information for various purposes, including:
 
 Providing, operating, and maintaining our website
+
 Improving, personalizing, and expanding our website
+
 Understanding and analyzing how you use our website
+
 Developing new products, services, features, and functionality
+
 Communicating with you, either directly or through partners, for customer service, updates, and other information related to the website, as well as for marketing and promotional purposes
+
 Sending you emails
+
 Finding and preventing fraud
+
 Log Files
 
-Sword Masters, Wheat Farming, Rainbow Obby, Escape From School follows a standard procedure of using log files. These files log visitors when they visit the website. Like other hosting companies, this includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. This information is not linked to personally identifiable information and is used for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+Our games follows a standard procedure of using log files. These files log visitors when they visit the website. Like other hosting companies, this includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. This information is not linked to personally identifiable information and is used for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
 
 Cookies and Web Beacons
 
-Sword Masters, Wheat Farming, Rainbow Obby, Escape From School uses 'cookies' similar to other websites. These cookies store information, including visitors' preferences and the pages on the website that the visitor accessed or visited. This information is used to optimize user experience by customizing our webpage content based on visitors' browser type and/or other information. For more general information on cookies, please read "What Are Cookies."
+Our games uses 'cookies' similar to other websites. These cookies store information, including visitors' preferences and the pages on the website that the visitor accessed or visited. This information is used to optimize user experience by customizing our webpage content based on visitors' browser type and/or other information. For more general information on cookies, please read "What Are Cookies."
 
 Advertising Partners
 
 Our site may have third-party advertising partners who use cookies and web beacons. Each advertising partner has its own Privacy Policy, and you can access these policies through the links provided.
 
 Google
+
 Third-Party Privacy Policies
+
 https://policies.google.com/privacy
 
 Our Privacy Policy does not apply to other advertisers or websites. Please consult the respective Privacy Policies of these third-party ad servers for detailed information, including their practices and instructions on opting out of certain options.
@@ -55,18 +62,27 @@ Your Privacy Rights
 If you are a California consumer, you have the right under the CCPA to:
 
 Request disclosure of the categories and specific pieces of personal data collected
+
 Request deletion of personal data collected
+
 Opt-out of the sale of personal data
+
 For GDPR, every user is entitled to:
 
 The right to access personal data
+
 The right to rectification of inaccurate information
+
 The right to erasure under certain conditions
+
 The right to restrict processing under certain conditions
+
 The right to object to processing under certain conditions
+
 The right to data portability under certain conditions
+
 For any requests related to privacy rights, please contact us.
 
 Children's Information
 
-Protecting children's privacy online is a priority. Sword Masters, Wheat Farming, Rainbow Obby, Escape From School does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you believe your child provided such information on our website, please contact us immediately, and we will promptly remove it from our records.
+Protecting children's privacy online is a priority. Our games does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you believe your child provided such information on our website, please contact us immediately, and we will promptly remove it from our records.
