@@ -21,6 +21,8 @@ How We Use Your Information
 
 We use the collected information for various purposes, including:
 
+Moderation for better game experience
+
 Providing, operating, and maintaining our website
 
 Improving, personalizing, and expanding our website
@@ -37,7 +39,7 @@ Finding and preventing fraud
 
 Log Files
 
-Our games follows a standard procedure of using log files. These files log visitors when they visit the website. Like other hosting companies, this includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. This information is not linked to personally identifiable information and is used for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+Our games follows a standard procedure of using log files. These files log visitors when they visit the website. Like other hosting companies, this includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks, in-game chat messages. This information is not linked to personally identifiable information and is used for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
 
 Cookies and Web Beacons
 
