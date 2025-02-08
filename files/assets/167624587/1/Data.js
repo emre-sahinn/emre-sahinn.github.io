@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Christmas Update!!",
-        body: "Hey masters, new year is approaching and we have new update for you! Check out the Pet enchancer machine at the Orc land to make your pets powerfull and enjoy the snow :)"
+        title: "Trade Tables Update!!",
+        body: "Hey masters, check out the new trade tables in the trade world where you can exchange items with other players!"
     },
     swordImages: [
         132483094,
