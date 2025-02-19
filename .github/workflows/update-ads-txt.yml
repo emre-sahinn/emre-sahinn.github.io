@@ -2,8 +2,8 @@ name: Update ads.txt from Poki
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight UTC
-  workflow_dispatch:  # Allows manual runs
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-ads-txt:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # Disable default credentials
 
       - name: Fetch latest ads.txt from Poki
         run: curl -o ads.txt https://poki.com/ads.txt
@@ -20,5 +22,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ads.txt
-          git diff --cached --quiet || (git commit -m "Update ads.txt from Poki" && git push)
-
+          git diff --cached --quiet || (git commit -m "Update ads.txt from Poki")
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
