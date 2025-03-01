@@ -3,7 +3,7 @@
 # It does not specify or restrict which ads may be displayed based on the viewer's location.
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
-#World, 2025.02.20
+#World, 2025.02.28
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -202,29 +202,6 @@ media.net, 8CU5474E2, DIRECT
 google.com, pub-1386280613967939, RESELLER, f08c47fec0942fa0
 
 ##Partner 30
-risecodes.com, 63c1545ad86b350001754cc3, DIRECT
-pubmatic.com, 160295, RESELLER, 5d62403b186f2ace
-xandr.com, 14082, RESELLER
-rubiconproject.com, 23876, RESELLER, 0bfd66d529a55807
-sharethrough.com, 5926d422, RESELLER, d53b998a7bd4ecd2
-yieldmo.com, 2754490424016969782, RESELLER
-media.net, 8CUQ6928Q, RESELLER
-lijit.com, 405318, RESELLER, fafdf38b16bf6b2b
-33across.com, 0010b00002Xbn7QAAR, RESELLER, bbea06d9c4d2853c
-video.unrulymedia.com, 335119963, RESELLER
-loopme.com, 11362, RESELLER, 6c8d5f95897a5a3b
-contextweb.com, 562615, RESELLER, 89ff185a4c4e857c
-onetag.com, 69f48c2160c8113, RESELLER
-openx.com, 537140488, RESELLER, 6a698e2ec38604c6
-sonobi.com, 4a289cdd79, RESELLER, d1a215d9eb5aee9e
-smartadserver.com, 4284, RESELLER
-smaato.com, 1100057444, RESELLER, 07bcf65f187117b4
-adform.com, 3119, RESELLER, 9f5210a2f0999e32
-inmobi.com, 9e311c7a68e94888aac7fbb4272381e2, RESELLER, 83e75a7ae333ca9d
-adyoulike.com, 78afbc34fac571736717317117dfa247, RESELLER
-amxrtb.com, 105199691, RESELLER
-zetaglobal.net, 716, RESELLER
-themediagrid.com, HW1PGR, RESELLER, 35d5010d7789b49d
 
 ##Partner 31
 
