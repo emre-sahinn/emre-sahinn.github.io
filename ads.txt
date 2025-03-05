@@ -3,7 +3,7 @@
 # It does not specify or restrict which ads may be displayed based on the viewer's location.
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
-#World, 2025.02.28
+#World, 2025.03.04
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -87,8 +87,8 @@ openx.com, 544042767, DIRECT, 6a698e2ec38604c6
 
 ##Partner 12
 richaudience.com, gIE1VDieUi, DIRECT
-adform.com, 1942, DIRECT
-appnexus.com, 8233, DIRECT
+adform.com, 1942, RESELLER
+appnexus.com, 8233, RESELLER
 lijit.com, 249425, RESELLER
 openx.com, 539625136, RESELLER
 pubmatic.com, 156538, RESELLER, 5d62403b186f2ace
