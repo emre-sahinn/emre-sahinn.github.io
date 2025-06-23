@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Trade Tables Update!!",
-        body: "Hey masters, check out the new trade tables in the trade world where you can exchange items with other players!"
+        title: "Arena Update!!",
+        body: "Hey everyone, check out the new extremely hard arena in the PVP world. Fight the monsters with your friends and win rewards!"
     },
     swordImages: [
         132483094,
