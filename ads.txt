@@ -3,7 +3,7 @@
 # It does not specify or restrict which ads may be displayed based on the viewer's location.
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
-#World, 2025.06.30
+#World, 2025.07.01
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -203,6 +203,7 @@ triplelift.com, 10312, DIRECT, 6c33edb13117fd86
 
 ##Partner 28
 media.net, 8CU5474E2, DIRECT
+media.net, 8CU2QB97K, DIRECT
 
 ##Partner 29
 google.com, pub-1386280613967939, RESELLER, f08c47fec0942fa0
