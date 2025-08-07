@@ -3,7 +3,7 @@
 # It does not specify or restrict which ads may be displayed based on the viewer's location.
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
-#World, 2025.07.01
+#World, 2025.08.06
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -236,4 +236,7 @@ smaato.com, 1100004890, DIRECT, 07bcf65f187117b4
 
 ##Partner 35
 yieldmo.com, 3834398458182050207, DIRECT
+
+##Partner 36
+improvedigital.com, 2639, DIRECT
 
