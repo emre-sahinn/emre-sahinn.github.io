@@ -276,7 +276,7 @@
                 return;
             }
 
-            initCSS(canvas, app._fillMode, app._width, app._height);
+            initCSS();
 
             if (LTC_MAT_1.length && LTC_MAT_2.length && app.setAreaLightLuts.length === 2) {
                 app.setAreaLightLuts(LTC_MAT_1, LTC_MAT_2);

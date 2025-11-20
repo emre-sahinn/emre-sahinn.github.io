@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Arena Update!!",
-        body: "Hey everyone, check out the new extremely hard arena in the PVP world. Fight the monsters with your friends and win rewards!"
+        title: "Asgard Update!!",
+        body: "Hey everyone, the time has come! Brand new Asgard world is waiting for you!"
     },
     swordImages: [
         132483094,
@@ -41,7 +41,11 @@ let StaticData = {
         171773096,
         203408314,
         203408313,
-        203408315
+        203408315,
+        256878819, // world 10 start
+        256878820,
+        256878818,
+        256878817,
     ],
     shieldImages: [
         132483094,
@@ -79,7 +83,11 @@ let StaticData = {
         171773413,
         171773415,
         203408362,
-        203408361
+        203408361,
+        256878203, // world 10 start
+        256878201,
+        256878202,
+        256878204,
     ],
     petImages: [
         141521157,
@@ -110,7 +118,10 @@ let StaticData = {
         208001205,
         208001202,
         208001206,
-
+        257155742, // mimic
+        257155744,
+        257155745,
+        257155743,
     ],
     petTemplates: [
         141930721,
@@ -141,5 +152,9 @@ let StaticData = {
         208292407,
         208292409,
         208292410,
+        257408896, // mimic
+        257408898,
+        257408899,
+        257408900,
     ],
 };
