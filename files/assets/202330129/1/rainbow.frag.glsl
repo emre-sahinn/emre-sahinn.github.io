@@ -22,12 +22,29 @@ uniform float font_textureWidth;
 uniform float time;
 uniform float outlineThickness; // Uniform to control outline thickness
 
+uniform vec3 colors[10];
+uniform int colorCount;
+
 vec4 getRainbowColor(float value) {
-    float r = abs(sin(value * 6.28318));  // Red
-    float g = abs(sin(value * 6.28318 + 2.0944));  // Green
-    float b = abs(sin(value * 6.28318 + 4.18879));  // Blue
-    return vec4(r, g, b, 1.0);  // RGB color with full alpha
+    if (colorCount == 0) return vec4(1.0); // fallback white
+
+    // Normalize value to a 0-1 range
+    float t = fract(value);
+
+    // Scale to color array range
+    float scaled = t * float(colorCount);
+    int index1 = int(floor(scaled)) % colorCount;
+    int index2 = (index1 + 1) % colorCount;
+
+    float localT = fract(scaled);
+
+    vec3 color1 = colors[index1];
+    vec3 color2 = colors[index2];
+
+    vec3 finalColor = mix(color1, color2, localT);
+    return vec4(finalColor, 1.0);
 }
+
 
 vec4 applyMsdf(vec4 color) {
     vec3 tsample = texture2D(texture_msdfMap, vUv0).rgb;
