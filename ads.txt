@@ -214,7 +214,7 @@ improvedigital.com, 2639, DIRECT
 appnexus.com, 11924, RESELLER, f5ab79cb980f11d1
 
 ##Partner 38
-adingo.jp, 33258, DIRECT
+adingo.jp, 33258, RESELLER
 
 
 
