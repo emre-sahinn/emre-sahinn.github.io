@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Asgard Update!!",
-        body: "Hey everyone, the time has come! Brand new Asgard world is waiting for you!"
+        title: "Christmas Update!!",
+        body: "Hey guys, VIP has landed in Ork land! Check it out for becoming VIP, also we added new battle mode in trade world! "
     },
     swordImages: [
         132483094,
