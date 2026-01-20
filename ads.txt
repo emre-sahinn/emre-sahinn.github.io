@@ -4,7 +4,7 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2025.12.30
+#World, 2026.01.19
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -113,7 +113,7 @@ inmobi.com, e98f0d119adf44788d60132b6e20fc5d, RESELLER, 83e75a7ae333ca9d
 
 ##Partner 13
 pubmatic.com, 156838, DIRECT, 5d62403b186f2ace
-pubmatic.com, 160485, DIRECT, 5d62403b186f2ace
+pubmatic.com, 160485, RESELLER, 5d62403b186f2ace
 
 ##Partner 14
 redpineapplemedia.com, 19970, DIRECT
