@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Christmas Update!!",
-        body: "Hey guys, VIP has landed in Ork land! Check it out for becoming VIP, also we added new battle mode in trade world! "
+        title: "Ores & Enchantments!",
+        body: "The new Mine World is here! Mine ores and smelt them to make enchantments to your weapons!"
     },
     swordImages: [
         132483094,
