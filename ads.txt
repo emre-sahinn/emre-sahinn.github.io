@@ -4,7 +4,8 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2026.02.13
+#World, 2026.04.03
+
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
@@ -47,11 +48,8 @@ supply.colossusssp.com, 836, RESELLER, 6c5b49d96ec1b458
 uis.mobfox.com, 93308, RESELLER, 5529a3d1f59865be
 opera.com, pub12058951686464, RESELLER, 55a0c5fd61378de3
 inmobi.com, a66d4a9ff81c4595a9f71acf179f73c5, RESELLER, 83e75a7ae333ca9d
-richaudience.com, MMuGgvZcVd, RESELLER
-
 
 ##Partner 2
-
 
 ##Partner 3
 
@@ -108,7 +106,6 @@ video.unrulymedia.com, 592728597, RESELLER
 conversantmedia.com, 100989, RESELLER, 03113cd04947736d
 inmobi.com, e98f0d119adf44788d60132b6e20fc5d, RESELLER, 83e75a7ae333ca9d
 
-
 ##Partner 13
 pubmatic.com, 156838, DIRECT, 5d62403b186f2ace
 pubmatic.com, 158918, DIRECT, 5d62403b186f2ace
@@ -158,7 +155,6 @@ superawesome.tv, 11, DIRECT, 706a53c9da3b4cee
 
 ##Partner 22
 
-
 ##Partner 23
 
 ##Partner 24
@@ -181,23 +177,6 @@ google.com, pub-1386280613967939, RESELLER, f08c47fec0942fa0
 ##Partner 30
 
 ##Partner 31
-showheroes.com, 6541, DIRECT
-viralize.com, 6541, DIRECT
-smartadserver.com, 2161, RESELLER, 060d053dcf45cbf3
-appnexus.com, 8833, RESELLER, f5ab79cb980f11d1
-appnexus.com, 15816, RESELLER, f5ab79cb980f11d1
-freewheel.tv, sg1258314, RESELLER
-freewheel.tv, sg1258475, RESELLER
-freewheel.tv, 536103-r-523319, RESELLER
-freewheel.tv, 536103-r-524565, RESELLER
-pubmatic.com, 156695, RESELLER, 5d62403b186f2ace
-yieldlab.net, 6378054, RESELLER
-madvertise.com, 7014, RESELLER
-smartadserver.com, 1408, RESELLER, 060d053dcf45cbf3
-appnexus.com,15816, RESELLER, f5ab79cb980f11d1
-smartadserver.com, 2058, RESELLER, 060d053dcf45cbf3
-rubiconproject.com, 16474, RESELLER, 0bfd66d529a55807
-aps.amazon.com, 5044, RESELLER
 
 ##Partner 32
 amxrtb.com, 105199877, DIRECT
@@ -219,7 +198,6 @@ tvp.tv, AR40, RESELLER, 1125b6434104a723
 
 ##Partner 34
 
-
 ##Partner 35
 yieldmo.com, 3834398458182050207, DIRECT
 
@@ -240,8 +218,4 @@ rubiconproject.com, 11534, RESELLER, 0bfd66d529a55807
 indexexchange.com, 192304, RESELLER, 50b1c356f2c5c8fc
 pubmatic.com, 156322, RESELLER, 5d62403b186f2ace
 openx.com, 562132006, RESELLER, 6a698e2ec38604c6
-
-
-
-
 
