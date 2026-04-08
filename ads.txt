@@ -4,7 +4,7 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2026.04.03
+#World, 2026.04.07
 
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
@@ -24,14 +24,12 @@ gumgum.com, 14141, RESELLER, ffdef49475d318a9
 admanmedia.com, 726, RESELLER
 emxdgt.com, 2009, RESELLER, 1e1d41537f7cad7f
 contextweb.com, 562541, RESELLER, 89ff185a4c4e857c
-smartadserver.com, 4125, RESELLER, 060d053dcf45cbf3
 themediagrid.com, JTQKMP, RESELLER, 35d5010d7789b49d
 sovrn.com, 375328, RESELLER, fafdf38b16bf6b2b
 lijit.com, 375328, RESELLER, fafdf38b16bf6b2b
 beachfront.com, 14804, RESELLER, e2541279e8e2ca4d
 mintegral.com, 10043, RESELLER, 0aeed750c80d6423
 sonobi.com, 7f5fa520f8, RESELLER, d1a215d9eb5aee9e
-onetag.com, 770a440e65869c2, RESELLER
 media.net, 8CUZ1MK22, RESELLER
 mediago.io, 045ac24b888bcf59a09731e7f0f2084f, RESELLER
 adyoulike.com, 7463c359225e043c111036d7a29affa5, RESELLER
