@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Ores & Enchantments!",
-        body: "The new Mine World is here! Mine ores and smelt them to make enchantments to your weapons!"
+        title: "Clan Update!",
+        body: "Build your clan, share powerful items through the clan chest, and upgrade together to unlock new strength. Team up, grow faster, and crush every monster in your path."
     },
     swordImages: [
         132483094,
