@@ -4,7 +4,7 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2026.04.17
+#World, 2026.04.22
 
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
@@ -16,6 +16,7 @@ appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
 appnexus.com, 3663, RESELLER, f5ab79cb980f11d1
 beachfront.com, 14804, RESELLER, e2541279e8e2ca4d
+bidline.net, 550e8400, RESELLER
 connectad.io, 455, RESELLER, 85ac85a30c93b3e5
 contextweb.com, 562541, RESELLER, 89ff185a4c4e857c
 districtm.io, 100962, RESELLER, 3fd707be9c4527c3
@@ -38,6 +39,7 @@ sonobi.com, 7f5fa520f8, RESELLER, d1a215d9eb5aee9e
 sovrn.com, 375328, RESELLER, fafdf38b16bf6b2b
 start.io, 123111883, RESELLER
 supply.colossusssp.com, 836, RESELLER, 6c5b49d96ec1b458
+thebrave.io, 1234794, RESELLER, c25b2154543746ac
 themediagrid.com, JTQKMP, RESELLER, 35d5010d7789b49d
 uis.mobfox.com, 93308, RESELLER, 5529a3d1f59865be
 undertone.com, 4205, RESELLER, d954590d0cb265b9
