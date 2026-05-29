@@ -4,7 +4,7 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2026.05.05
+#World, 2026.05.28
 
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
@@ -201,6 +201,14 @@ tvp.tv, AR40, RESELLER, 1125b6434104a723
 
 ##Partner 35
 yieldmo.com, 3834398458182050207, DIRECT
+admanmedia.com, 746, RESELLER
+contextweb.com, 561118, RESELLER, 89ff185a4c4e857c
+conversantmedia.com, 100357, RESELLER, 03113cd04947736d
+pubnative.net, 1007284, RESELLER, d641df8625486a7b
+pubnative.net, 1007285, RESELLER, d641df8625486a7b
+pubnative.net, 1007286, RESELLER, d641df8625486a7b
+selectmedia.asia, 1c45ab2c1e8527faff8z6932, RESELLER, e365c871a27c655d
+visiblemeasures.com, 1041, RESELLER
 
 ##Partner 36
 improvedigital.com, 2639, DIRECT
