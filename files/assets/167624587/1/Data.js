@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Clan Update!",
-        body: "Build your clan, share powerful items through the clan chest, and upgrade together to unlock new strength. Team up, grow faster, and crush every monster in your path."
+        title: "Godyard World Update!",
+        body: "After a long time, finally Godyard world is here. With brand new enemies, pets and items. Defeat Mordolith if you can!!"
     },
     swordImages: [
         132483094,
@@ -46,6 +46,10 @@ let StaticData = {
         256878820,
         256878818,
         256878817,
+        293183925, // world 11 start
+        293183923,
+        293183922,
+        293183924,
     ],
     shieldImages: [
         132483094,
@@ -88,6 +92,10 @@ let StaticData = {
         256878201,
         256878202,
         256878204,
+        293183928, // world 11 start
+        293183929,
+        293183930,
+        293183931,
     ],
     petImages: [
         141521157,
@@ -122,6 +130,10 @@ let StaticData = {
         257155744,
         257155745,
         257155743,
+        293423080, // ponyo
+        293423078,
+        293423079,
+        293423077,
     ],
     petTemplates: [
         141930721,
@@ -156,5 +168,9 @@ let StaticData = {
         257408898,
         257408899,
         257408900,
+        293421428, // ponyo
+        293421429,
+        293421430,
+        293421431,
     ],
 };
