@@ -237,8 +237,8 @@ axis-marketplace.com, 332, RESELLER
 flashb.id, d4c7a4b6-1a4c-5ec3-b8c8-fceebdaa08c8, DIRECT
 insticator.com, 178a035b-0561-4fec-a9a6-f973ee4c8c31, RESELLER, b3511ffcafb23a32
 kueez.com, 4e6bcaa6797e0019a2362406888380d6, RESELLER
-lijit.com, 481061-eb, RESELLER, fafdf38b16bf6b2b #SOVRN
-lijit.com, 481061, RESELLER, fafdf38b16bf6b2b #SOVRN
+lijit.com, 481061-eb, RESELLER, fafdf38b16bf6b2b
+lijit.com, 481061, RESELLER, fafdf38b16bf6b2b
 pubmatic.com, 157529, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161174, RESELLER, 5d62403b186f2ace
 pubmatic.com, 162484, RESELLER, 5d62403b186f2ace
