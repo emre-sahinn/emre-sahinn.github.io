@@ -1,7 +1,7 @@
 let StaticData = {
     announcement: {
-        title: "Godyard World Update!",
-        body: "After a long time, finally Godyard world is here. With brand new enemies, pets and items. Defeat Mordolith if you can!!"
+        title: "Version 1.19",
+        body: "Daily Quests are here! Complete them for awesome rewards. Mine world has now Gold Ore, boost your luck with NPCs, and add your friends in-game with the new Friends List!"
     },
     swordImages: [
         132483094,
