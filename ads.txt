@@ -4,7 +4,7 @@
 # To learn more about ads.txt please visit: https://iabtechlab.com/ads-txt-about/
 
 OWNERDOMAIN=poki.com
-#World, 2026.07.16
+#World, 2026.08.05
 
 ##Partner 1
 aps.amazon.com, e32f1423-28bc-43ed-8ab0-5ae6b4449cf8, DIRECT
@@ -246,3 +246,6 @@ sharethrough.com, 4741, RESELLER, d53b998a7bd4ecd2
 smaato.com, 1100047589, RESELLER, 07bcf65f187117b4
 smartadserver.com, 4741, RESELLER, 060d053dcf45cbf3
 video.unrulymedia.com, 360589677, RESELLER
+
+##Partner 42
+trustedstack.com, TSXWABBUP, DIRECT
