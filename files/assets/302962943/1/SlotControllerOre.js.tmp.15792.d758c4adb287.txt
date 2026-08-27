@@ -1,0 +1,279 @@
+var SlotControllerOre = pc.createScript('slotControllerOre');
+SlotControllerOre.attributes.add('price', { type: 'number' });
+SlotControllerOre.attributes.add('isFree', { type: 'boolean', default: true });
+
+SlotControllerOre.prototype.unlock = function () {
+    if (this.lockedParent)
+        this.lockedParent.enabled = false;
+    this.isFree = true;
+};
+
+SlotControllerOre.prototype.lock = function () {
+    if (this.lockedParent)
+        this.lockedParent.enabled = true;
+    this.isFree = false;
+};
+
+// initialize code called once per entity
+SlotControllerOre.prototype.initialize = function () {
+    this.index = this.entity.parent.children.indexOf(this.entity);
+    this.background = this.entity;
+    this.itemImage = this.entity.findByName("Image");
+    this.itemTitle = this.entity.findByName("name");
+    this.itemLevel = this.entity.findByName("level");
+
+    if (!this.isFree) {
+        this.lockedParent = this.entity.children[3];
+        this.lockedSlotPrice = this.lockedParent.children[2].element;
+        this.lockedSlotPrice.text = numRound(this.price);
+        this.lockedParent.enabled = true;
+    }
+
+    if (this.initialized === true) return;
+    this.initialized = true;
+
+    this.isFull = false;
+    this.isActiveSlot = false;
+    this.networkManager = this.app.root.findByName('NetworkManager').script.networkManager;
+    this.inventoryController = this.app.root.findByName('InventoryButton').script.inventoryController;
+    this.menuController = this.app.root.findByName('GameUI').script.menuController;
+
+    this.entity.on("SlotControllerOre:buySlot", () => {
+        if (this.networkManager.localInv.gold >= this.price) {
+            this.networkManager.room.send("Client:SlotControllerOre:buySlot");
+            this.app.fire('WarningTextController:setWarning', "You successfully bought a ore slot", 2, new pc.Color(1, 1, 0, 1));
+            this.menuController.sound.play("bought");
+            //this.unlock();
+        } else {
+            this.menuController.sound.play("failed");
+            this.app.fire('WarningTextController:setWarning', "Purchase failed.. You need " + numRound(this.price - this.networkManager.localInv.gold) + " gold to buy a ore slot", 5);
+        }
+    }, this);
+
+    this.entity.button.on('click', function (event) {
+        if (this.item == null) {
+            if (!this.isFree) {
+                this.app.fire("popupController:showPopup", "Buy Slot", "Are you sure to buy ore slot for " + numRound(this.price) + " gold?", true, this.entity, "SlotControllerOre:buySlot", "closePopup");
+                return;
+            }
+        }
+        if (this.app.isWatchingAd) return;
+
+        if (this.inventoryController.detailPanelOre.enabled && this.inventoryController.selectedDetailPanelOre === this) {
+            this.menuController.sound.play("close");
+            this.inventoryController.selectedDetailPanelOre = null;
+            this.inventoryController.detailPanelOre.enabled = false;
+            this.inventoryController.detailPanelOreSellButton.button.off('click');
+            this.inventoryController.detailPanelOreLockButton.button.off('click');
+            if (this.isActiveSlot === false)
+                this.entity.element.sprite = this.inventoryController.slotImages[0].resource;
+        } else {
+            if (this.isFull != true) {
+                this.inventoryController.detailPanelOre.enabled = false;
+                return;
+            }
+
+            this.menuController.sound.play("slotClick");
+            if (this.isActiveSlot === false)
+                this.entity.element.sprite = this.inventoryController.slotImages[1].resource;
+            if (this.inventoryController.selectedDetailPanelOre && this.inventoryController.selectedDetailPanelOre !== this) {
+                if (this.inventoryController.selectedDetailPanelOre.isActiveSlot === false)
+                    this.inventoryController.selectedDetailPanelOre.entity.element.sprite = this.inventoryController.slotImages[0].resource;
+                this.inventoryController.detailPanelOreSellButton.button.off('click');
+                this.inventoryController.detailPanelOreLockButton.button.off('click');
+            }
+            this.inventoryController.selectedDetailPanelOre = this;
+
+            if (this.app.isSmelterEnabled) {
+                if (this.item.isMelted) return;
+
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                let count = this.app.networkManager.localInv.ores.filter(o => o.type == this.item.type && !o.isMelted && !o.isLocked).length;
+
+                if (count < 10) {
+                    this.app.fire('WarningTextController:setWarning', "You need " + (10 - count) + " more " + this.item.data.name + " ores!", 5, new pc.Color(1, 1, 0, 1));
+                }
+                else {
+                    this.app.fire('SmelterController:setForgeItem', this.item);
+                }
+            }
+            else if (this.app.isEnchanterEnabled) {
+                if (!this.item.isMelted) {
+                    this.app.fire('WarningTextController:setWarning', "Ore has to be melted!", 5, new pc.Color(1, 1, 0, 1));
+                    return;
+                }
+
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire('EnchanterController:setOre', this.item);
+            }
+            else if (this.app.isRerollerEnabled) {
+                if (!this.item.isMelted) {
+                    this.app.fire('WarningTextController:setWarning', "Ore has to be melted!", 5, new pc.Color(1, 1, 0, 1));
+                    return;
+                }
+
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire('RerollerController:setOre', this.item);
+            }
+            else if (this.app.isStorageEnabled) {
+                this.app.fire("StoragePanelController:setSlotItem", this.item, 3);
+            }
+            else if (this.app.isClanChestUIEnabled) {
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire("ClanChestController:setSlotItem", this.item, 3);
+            }
+            else if (this.app.isTraderEnabled) {
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire("TradePanelController:setSlotItem", this.item, 3);
+            }
+            else if (this.app.canPutItemToTradeTable) {
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire("TradeTableController:setSlotItem", this.item, 3);
+            }
+            else if (this.app.isJoinBetBattleUIEnabled) {
+                if (this.item.isLocked == true) {
+                    this.app.fire('WarningTextController:setWarning', "You have to unlock your item first!", 5, new pc.Color(1, 0, 0, 1));
+                    return;
+                }
+
+                this.app.fire("BetBattleAreaController:setSlotItem", this.item, 3);
+            }
+            else {
+                this.inventoryController.detailPanelOre.enabled = true;
+            }
+        }
+
+        this.inventoryController.detailPanelOre.setPosition(this.entity.getPosition().clone());
+        const newPos = this.inventoryController.detailPanelOre.getLocalPosition().clone();
+        this.inventoryController.detailPanelOre.setLocalPosition(newPos.x - 200, Math.max(-100, Math.min(newPos.y, 150)), newPos.z);
+
+        this.setupDetailPanel(this.item);
+    }, this);
+};
+
+SlotControllerOre.prototype.setup = async function (ore) {
+    this.item = ore;
+    this.item.data = ores[ore.type];
+    this.isSword = false;
+
+    if (!this.inventoryController.oreSlotsByItemId)
+        this.inventoryController.oreSlotsByItemId = {};
+
+    this.inventoryController.oreSlotsByItemId[ore.itemId] = this;
+
+    if (!this.lockedIcon) {
+        let lockedIconTemplate = await getAsset(290833315);
+        this.lockedIcon = lockedIconTemplate.resource.instantiate();
+        this.entity.addChild(this.lockedIcon);
+    }
+
+    this.lockedIcon.enabled = ore.isLocked ?? false;
+
+    let nameText = this.item.data.name;
+    if (!ore.isMelted) nameText += " Ore";
+
+    if (nameText.length > 10) {
+        this.itemTitle.element.text = nameText.substring(0, 10) + "..";
+    } else {
+        this.itemTitle.element.text = nameText;
+    }
+    this.itemLevel.element.text = "";
+    this.background.element.color = getOreColor(ore.type);
+
+    let txt = await getAsset(ore.isMelted ? this.item.data.textureId : this.item.data.oreTextureId)
+    this.itemImage.element.texture = await txt.resource;
+
+    this.itemImage.setLocalScale(new pc.Vec3(0.4, 0.4, 0.4));
+    this.itemImage.setLocalEulerAngles(0, 0, 0);
+    this.isFull = true;
+};
+
+SlotControllerOre.prototype.setSlotActive = function (state) {
+    if (this.inventoryController == null)
+        this.inventoryController = this.app.root.findByName('InventoryButton').script.inventoryController;
+
+    if (state) {
+        this.entity.element.sprite = this.inventoryController.slotImages[2].resource;
+        this.isActiveSlot = true;
+    } else {
+        this.entity.element.sprite = this.inventoryController.slotImages[0].resource;
+        this.isActiveSlot = false;
+    }
+};
+
+SlotControllerOre.prototype.setupEmpty = function () {
+    this.initialize();
+    this.item = null;
+    this.itemTitle.element.text = "";
+    this.itemLevel.element.text = "";
+    this.itemImage.element.texture = this.app.assets.get(132483094).resource;
+    this.background.element.color = new pc.Color(1, 1, 1, 1);
+    this.inventoryController.detailPanelEquipButton.button.off('click');
+    this.inventoryController.detailPanelMergeButton.button.off('click');
+    this.inventoryController.detailPanelSellButton.button.off('click');
+    this.inventoryController.detailPanelEquipButton.enabled = true;
+    this.inventoryController.detailPanelMergeButton.enabled = false;
+    this.inventoryController.detailPanelSellButton.enabled = false;
+    this.isActiveSlot = false;
+    this.isFull = false;
+};
+
+SlotControllerOre.prototype.setupDetailPanel = function (item) {
+    if (item == null) return;
+
+    this.inventoryController.detailPanelOreSellButton.enabled = true;
+    this.inventoryController.detailPanelOreSellButton.button.off('click');
+
+    //sell button
+    const price = numRound(item.isMelted ? item.data.meltedPriceGold : item.data.priceGold)
+    this.inventoryController.detailPanelOreSellButton.children[0].element.text = "SELL" + "\n" + price + " Gold";
+    this.inventoryController.detailPanelOreSellButton.button.on('click', function (event) {
+        if (this.app.betInfo || this.app.currentAreaToJoin || this.app.currentBet) {
+            this.app.fire('WarningTextController:setWarning', "You can't sell your ores in battle!", 5, new pc.Color(1, .9, 0, 1));
+            return;
+        }
+
+        this.app.fire("popupController:showPopup",
+            "Sell Item", "Are you sure to sell " + (item.isMelted ? "Smelted " : "") + item.data.name + " ore for " + price + " gold?", true, this.inventoryController.entity,
+            "InventoryController:sellOre", "closePopup", { itemId: item.itemId, name: item.data.name, price: price });
+        this.inventoryController.detailPanelOre.enabled = false;
+    }, this);
+
+    this.inventoryController.detailPanelOreName.element.text = (item.isMelted ? "Smelted " : "") + item.data.name;
+    this.inventoryController.detailPanelName.element.color = getOreColor(this.item.type);
+};
+
+function getOreColor(type) {
+    switch (type) {
+        case 0: return new pc.Color(.34, .34, .34, 1); break; // Coal
+        case 1: return new pc.Color(.6, 1, .6, 1); break; // Emerald
+        case 2: return new pc.Color(.44, 1, 1, 1); break; // Diamond
+        case 3: return new pc.Color(.85, .1, .1, 1); break; // Ruby
+        case 4: return new pc.Color(1, .84, 0, 1); break; // Gold
+        default: return new pc.Color(1, 1, 1, 1); break;
+    }
+}
