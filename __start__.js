@@ -148,8 +148,6 @@
             // new graphics device creation function with promises
             var gfxOptions = {
                 deviceTypes: deviceTypes,
-                glslangUrl: gpuLibPath + 'glslang.js',
-                twgslUrl: gpuLibPath + 'twgsl.js',
                 powerPreference: deviceOptions.powerPreference,
                 antialias: deviceOptions.antialias !== false,
                 alpha: deviceOptions.alpha === true,
